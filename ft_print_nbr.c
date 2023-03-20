@@ -64,4 +64,3 @@ int ft_print_nbr(int nb)
     free(str);
     return (len);
 }
-

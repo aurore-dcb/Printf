@@ -7,11 +7,6 @@ int     size_nb_hexa(unsigned int nb)
     compteur = 0;
     if (nb == 0)
         return (1);
-    // if (nb < 0)
-    // {
-    //     nb *= -1;
-    //     compteur++;
-    // }
     while (nb)
     {
         compteur++;
