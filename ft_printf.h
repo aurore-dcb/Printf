@@ -5,9 +5,10 @@
 #include <stdio.h>
 
 int    ft_putchar(char c);
-int    ft_strlen(char *str);
+int    ft_strlen(const char *str);
 int    ft_putstr(char *str);
 int     ft_print_nbr(int nb);
+int     size_nb(int nb);
 // void    ft_print_hexa(int nb, char c);
 int     ft_print_hex(unsigned int num, const char format);
-void    ft_put_unsigned_nbr(unsigned int nbr);
+int     ft_print_unsigned(unsigned int nb);

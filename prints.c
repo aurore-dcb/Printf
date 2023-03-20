@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "ft_printf.h"
 
 int    ft_putchar(char c)
 {
@@ -6,7 +6,7 @@ int    ft_putchar(char c)
     return (1);
 }
 
-int    ft_strlen(char *str)
+int    ft_strlen(const char *str)
 {
     int i;
     
@@ -18,7 +18,7 @@ int    ft_strlen(char *str)
 
 int    ft_putstr(char *str)
 {
-    if (str == NULL)
+    if (!str)
     {
         write(1, "(null)", 6);
         return (6);
