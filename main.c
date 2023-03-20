@@ -32,15 +32,15 @@ int     conversion(va_list args, char c)
         len = ft_print_unsigned(va_arg(args, unsigned int));
     else if (c == 'x' || c == 'X')
         // ft_print_hexa(va_arg(args, int), c);
-        len = ft_print_hex(va_arg(args, int), c);
+        // len = ft_print_hexa(va_arg(args, int), c);
+        len = convert_hexa(va_arg(args, unsigned int), c);
     else if (c == '%')
         len = ft_putchar('%');
     // printf("\nlen : %d\n", len);
+
     return (len);
 }
 
-/* en cas de succes, printf renvoie le nombre de caractères ecris
-sinon printf renvoie un nombre negatif */
 int ft_printf(const char *format, ...)
 {
     int     i;
@@ -65,19 +65,13 @@ int ft_printf(const char *format, ...)
             nb_chars += ft_putchar(format[i++]);
     }
     va_end(args);
-    // printf("nb chars : %d\n", nb_chars);
+    printf("nb chars : %d\n", nb_chars);
     return (nb_chars);
 }
 #include <stdio.h>
-#include <unistd.h>
-#include <string.h>
-#include <limits.h>
-// printf("Chaine : %s\n", str);
+
 int main()
 {
-    ft_printf("test1 %d.\n", (-91) + 91);
-    // ft_printf("test1 %i\n", INT_MIN);
-    // ft_printf("test2 : %d\n", 033);
-    // printf("%d", itoa(027));
+    ft_printf("test1 .%x.\n", -15);
     return (0);
 }

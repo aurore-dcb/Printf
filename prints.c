@@ -27,20 +27,3 @@ int    ft_putstr(char *str)
         write(1, &(*str++), 1);
     return (ft_strlen(str));
 }
-
-// void    ft_print_hexa(int nb, char c)
-// {
-//     char *base;
-
-//     if (c == 'x')
-//         base = "0123456789abcdef";
-//     else
-//         base = "0123456789ABCDEF";
-//     if (nb == 0)
-//         write(1, "0", 1);
-//     while (nb)
-//     {
-//         write(1, &(base[nb % 16]), 1);
-//         nb = nb / 16;
-//     }
-// }
