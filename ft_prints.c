@@ -6,12 +6,12 @@ int    ft_putchar(char c)
     return (1);
 }
 
-int    ft_strlen(const char *str)
+int    ft_strlen(char *str)
 {
     int i;
     
     i = 0;
-    if (str)
+    if (str != NULL)
     {
         while (str[i])
             i++;

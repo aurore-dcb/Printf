@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 int     ft_putchar(char c);
-int     ft_strlen(const char *str);
+int     ft_strlen(char *str);
 int     ft_putstr(char *str);
 int     ft_print_nbr(int nb);
 int     size_nb(int nb);
