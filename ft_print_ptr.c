@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int ft_print_ptr(long int p)
+int ft_print_ptr(unsigned long p)
 {
     char *base;
     char res[20];
