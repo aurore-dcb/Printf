@@ -53,14 +53,18 @@ int ft_print_nbr(int nb)
     int len;
     char *str;
 
+    len = 0;
     if (nb == -2147483648)
     {
         write(1, "-2147483648", 11);
         return (11);
     }
     str = ft_itoa(nb);
-    len = ft_strlen(str);
-    ft_putstr(str);
+    if (str != NULL)
+    {
+        len = ft_strlen(str);
+        ft_putstr(str);
+    }
     free(str);
     return (len);
 }
