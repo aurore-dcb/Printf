@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+#include "include/ft_printf.h"
 
 int is_an_option(char c)
 {
@@ -57,9 +57,3 @@ int ft_printf(const char *format, ...)
     return (nb_chars);
 }
 
-// int main()
-// {
-//     ft_printf("Last One : %d\n", 5647568);
-//     // printf("Last One : %d\n", NULL);
-//     return (0);
-// }

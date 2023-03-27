@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+#include "include/ft_printf.h"
 
 int    ft_putchar(char c)
 {
@@ -33,3 +33,4 @@ int    ft_putstr(char *str)
         write(1, &(str[i++]), 1);
     return (i);
 }
+
