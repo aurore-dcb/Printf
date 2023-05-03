@@ -6,7 +6,7 @@
 /*   By: aducobu <aducobu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 13:05:44 by aducobu           #+#    #+#             */
-/*   Updated: 2023/05/03 11:20:08 by aducobu          ###   ########.fr       */
+/*   Updated: 2023/05/03 15:37:46 by aducobu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,3 +68,8 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (nb_chars);
 }
+
+// int main()
+// {
+// 	ft_printf(" %i \n", 9);
+// }

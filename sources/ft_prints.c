@@ -6,7 +6,7 @@
 /*   By: aducobu <aducobu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 13:05:54 by aducobu           #+#    #+#             */
-/*   Updated: 2023/05/03 11:14:33 by aducobu          ###   ########.fr       */
+/*   Updated: 2023/05/03 15:44:08 by aducobu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ int	ft_strlen(char *str)
 {
 	int	i;
 
-	i = 0;
 	if (!str)
 		return (0);
-	while (str[i])
+	i = 0;
+	while (str[i] != '\0')
 		i++;
 	return (i);
 }
@@ -41,6 +41,9 @@ int	ft_putstr(char *str)
 		return (6);
 	}
 	while (str[i])
-		write(1, &(str[i++]), 1);
+	{
+		write(1, &(str[i]), 1);
+		i++;
+	}
 	return (i);
 }

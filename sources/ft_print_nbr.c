@@ -6,7 +6,7 @@
 /*   By: aducobu <aducobu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 13:05:21 by aducobu           #+#    #+#             */
-/*   Updated: 2023/05/03 11:19:55 by aducobu          ###   ########.fr       */
+/*   Updated: 2023/05/03 17:36:49 by aducobu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_itoa(int nb)
 	int		i;
 	char	*res;
 
-	i = size_nb(nb) - 1;
+	i = size_nb(nb);
 	res = (char *)malloc(sizeof(char) * (size_nb(nb) + 1));
 	if (!res)
 		return (NULL);
@@ -54,7 +54,7 @@ char	*ft_itoa(int nb)
 	}
 	while (nb)
 	{
-		res[i--] = nb % 10 + '0';
+		res[--i] = nb % 10 + '0';
 		nb = nb / 10;
 	}
 	return (res);
@@ -72,11 +72,10 @@ int	ft_print_nbr(int nb)
 		return (11);
 	}
 	str = ft_itoa(nb);
-	if (str != NULL)
-	{
-		ft_putstr(str);
-		len = ft_strlen(str);
-		free(str);
-	}
+	if (!str)
+		return (0);
+	ft_putstr(str);
+	len = ft_strlen(str);
+	free(str);
 	return (len);
 }
