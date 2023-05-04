@@ -6,7 +6,7 @@
 /*   By: aducobu <aducobu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 13:05:44 by aducobu           #+#    #+#             */
-/*   Updated: 2023/05/03 15:37:46 by aducobu          ###   ########.fr       */
+/*   Updated: 2023/05/04 10:10:06 by aducobu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ int	ft_printf(const char *format, ...)
 	i = 0;
 	nb_chars = 0;
 	va_start(args, format);
+	if (!format)
+		return (0);
 	while (format[i])
 	{
 		if (format[i] == '%')
@@ -68,8 +70,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (nb_chars);
 }
-
-// int main()
-// {
-// 	ft_printf(" %i \n", 9);
-// }
